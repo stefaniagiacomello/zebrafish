@@ -8,7 +8,7 @@ library(circlize)
 setwd("Documents/Projects/zebrafish/")
 
 #Load input data
-x <- read.xls("PCA data for stefania.xlsx", sheet = 1, header = T)
+x <- read.xls("data.xlsx", sheet = 1, header = T)
 rownames(x) = x$cell
 x = x[, 2:17] #full data table
 x_subset = x[, 1:13] #partial data table
