@@ -10,8 +10,7 @@ setwd("Documents/Projects/zebrafish/")
 #Load input data
 x <- read.xls("data.xlsx", sheet = 1, header = T)
 rownames(x) = x$cell
-x = x[, 2:17] #full data table
-x_subset = x[, 1:13] #partial data table
+x_subset = x[, 2:14] #partial data table
 
 #Create metafile
 metafile <- matrix(nrow = 64, ncol=2)
@@ -52,3 +51,4 @@ dend <- dend %>%
 pdf(file="circle_200424.pdf")
 circlize_dendrogram(dend)
 dev.off()
+
